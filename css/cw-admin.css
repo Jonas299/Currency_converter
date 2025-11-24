@@ -1,0 +1,18 @@
+.cw-moneda-row {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.cw-row-actions {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+
+.cw-flag-preview img {
+    height: 20px;
+}

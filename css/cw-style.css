@@ -1,0 +1,90 @@
+.cw-converter {
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.cw-converter label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;;
+    color: #004838;
+    font-weight: 600;
+}
+
+.cw-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.cw-row div {
+    width: 50%;
+}
+
+.cw-converter input,
+.cw-converter select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e9e9e9;
+}
+
+#cw_convert_btn {
+    background: #16d37a;
+    color: #fff;
+    border: 0;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.cw-table-widget {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.cw-table-head {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    color: #004838;
+}
+
+.cw-table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 25px 0;
+    border-bottom: 1px solid #f6f6f6;
+    font-weight: 700;
+}
+
+/* Add highlight style for base currency row */
+.cw-base-currency-row {
+    background: #10b981;
+    color: #fff;
+    padding: 15px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-bottom: none;
+}
+
+.cw-base-currency-row .cw-col-moneda {
+    font-weight: 600;
+}
+
+#cw_result {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.cw-flag-preview {
+    display: inline;
+    margin-left: -26px;
+    padding-right: 5px;
+}
