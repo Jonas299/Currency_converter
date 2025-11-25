@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_action('admin_menu', 'cw_admin_menu');
 function cw_admin_menu(){
-    add_menu_page('Monedas CW', 'Monedas CW', 'manage_options', 'cw-monedas', 'cw_monedas_page', 'dashicons-money', 26);
-    add_submenu_page('cw-monedas','Ajustes Conversor','Ajustes','manage_options','cw-monedas-settings','cw_monedas_settings_page');
+    add_menu_page('Tasas de Monedas CW', 'Tasas de Monedas CW', 'edit_posts', 'cw-monedas', 'cw_monedas_page', 'dashicons-money', 26);
+    add_submenu_page('cw-monedas','Ajustes Conversor','Ajustes','edit_posts','cw-monedas-settings','cw_monedas_settings_page');
 }
 
 add_action('admin_enqueue_scripts', 'cw_admin_assets');
@@ -28,7 +28,7 @@ function cw_admin_assets($hook){
 }
 
 function cw_monedas_page(){
-    if(!current_user_can('manage_options')) return;
+    if(!current_user_can('edit_posts')) return;
     if(isset($_POST['cw_save_monedas'])){
         check_admin_referer('cw_save_monedas_action','cw_save_monedas_field');
         $monedas = array();
@@ -139,7 +139,7 @@ function cw_monedas_page(){
 
 /* Ajustes base */
 function cw_monedas_settings_page(){
-    if(!current_user_can('manage_options')) return;
+    if(!current_user_can('edit_posts')) return;
     if(isset($_POST['cw_save_settings'])){
         check_admin_referer('cw_save_settings_action','cw_save_settings_field');
         update_option('cw_base_currency_code', sanitize_text_field($_POST['cw_base_currency_code']));
